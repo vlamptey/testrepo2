@@ -5,6 +5,9 @@ provider "aws" {
 # Configure the AWS Provider
 # Create a VPC
 resource "aws_vpc" "example2" {
-  cidr_block = "20.0.0.0/24"
+  cidr_block = "172.0.0.0/16"
+  tags = {
+    Name = "tf-example"
+  }
   
 }
